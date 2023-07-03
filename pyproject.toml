@@ -9,6 +9,8 @@ packages = [{include = "mind_games"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 
+[tool.poetry.scripts]
+mind-games = "mind_games.scripts.engine:main"
 
 [build-system]
 requires = ["poetry-core"]

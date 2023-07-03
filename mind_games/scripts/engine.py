@@ -1,4 +1,4 @@
-from games import calculate
+from mind_games.scripts.games import calculate
 
 
 def greet():
@@ -43,8 +43,12 @@ def game():
     #     print(f'Congratulations, {user_name}!')
 
 
-if __name__ == '__main__':
+def main():
     greet()
     choose_game()
     discription_of_games()
     game()
+
+
+if __name__ == '__main__':
+    main()
