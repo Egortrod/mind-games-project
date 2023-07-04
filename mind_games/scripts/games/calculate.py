@@ -1,48 +1,51 @@
 from random import randint
-# from engine import user_name as name
+from mind_games.scripts.cli import *
 
 
-def calc():
-    global correct_answers
-    correct_answers = 0
+def user_correct_answer():
+    print('Correct!')
+
+
+def user_not_correct_answer():
+    print(f"'{user_input}' is wrong answer ;(. "
+          f"Correct answer was '{correct_answer}'."
+          f"\nLet's try again, {user_name()}!")
+    
+
+def comparing():
+    global out
+    out = True
+    if correct_answer == user_input:
+        user_correct_answer()
+    else:
+        user_not_correct_answer()
+        out = False
+
+
+def outt():
+    return out
+
+
+def main():
+    global user_input
+    global correct_answer
     variants_of_exp = ['*', '-', '+']
-    while correct_answers != 3:
-        first_number = randint(1, 25)
-        second_number = randint(1, 25)
-        exp = variants_of_exp[randint(0, 2)]
-        print(f'Question: {first_number} {exp} {second_number}')
-        user_input = int(input('Your answer: '))
-        match exp:
+    first_number = randint(1, 25)
+    second_number = randint(1, 10)
+    exp = variants_of_exp[randint(0, 2)]
+    print(f'Question: {first_number} {exp} {second_number}')
+    user_input = int(input('Your answer: '))
+    match exp:
             case '*':
                 correct_answer = second_number * first_number
-                if correct_answer == user_input:
-                    print('Correct!')
-                    correct_answers += 1
-                else:
-                    print(f"'{user_input}' is wrong answer ;(. "
-                          f"Correct answer was '{correct_answer}'.")
-                        #   f"\nLet's try again, {name}!")
-                    break
+                comparing()
             case '-':
                 correct_answer = first_number - second_number
-                if correct_answer == user_input:
-                    print('Correct!')
-                    correct_answers += 1
-                else:
-                    print(f"'{user_input}' is wrong answer ;(. "
-                          f"Correct answer was '{correct_answer}'.")
-                        #   f"\nLet's try again, {name}!")
-                    break
+                comparing()
             case '+':
                 correct_answer = second_number + first_number
-                if correct_answer == user_input:
-                    print('Correct!')
-                    correct_answers += 1
-                else:
-                    print(f"'{user_input}' is wrong answer ;(. "
-                          f"Correct answer was '{correct_answer}'.")
-                        #   f"\nLet's try again, {name}!")
-                    break
+                comparing()
 
 if __name__ == '__main__':       
-    calc()
+    greet()
+    main()
