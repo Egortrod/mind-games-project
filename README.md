@@ -1,0 +1,1 @@
+<a href="https://codeclimate.com/github/Egortrod/mind-games-project/maintainability"><img src="https://api.codeclimate.com/v1/badges/3ed57a1dde9b2423eaab/maintainability" /></a>

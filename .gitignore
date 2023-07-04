@@ -6,3 +6,5 @@ dist/
 .coverage
 coverage.xml
 .pytest_cache/
+mind_games/scripts/__pycache__/engine.cpython-310.pyc
+mind_games/scripts/games/__pycache__/calculate.cpython-310.pyc
