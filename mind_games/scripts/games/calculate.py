@@ -7,9 +7,9 @@ def user_correct_answer():
 
 
 def user_not_correct_answer():
-    print(f"'{user_input}' is wrong answer ;(. "
+    print(f"\n'{user_input}' is wrong answer ;(. "
           f"Correct answer was '{correct_answer}'."
-          f"\nLet's try again, {user_name()}!")
+          f"\nLet's try again, {user_name()}!\n")
     
 
 def comparing():
@@ -22,7 +22,7 @@ def comparing():
         out = False
 
 
-def outt():
+def calc_out():
     return out
 
 
@@ -45,6 +45,7 @@ def main():
             case '+':
                 correct_answer = second_number + first_number
                 comparing()
+
 
 if __name__ == '__main__':       
     greet()
