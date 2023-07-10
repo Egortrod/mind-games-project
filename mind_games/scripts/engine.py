@@ -3,6 +3,7 @@ from mind_games.scripts.games.calculate import calc_out
 from mind_games.scripts.games.arithmetic_progression import ar_out
 from mind_games.scripts.cli import greet, user_name
 import time
+from colorama import Fore
 # from mind_games.scripts.games.calculate import *
 
 

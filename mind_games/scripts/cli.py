@@ -11,7 +11,7 @@ def greet():
     while True:
         time.sleep(0.7)
         user_name = str(input(Fore.CYAN + 'Input your name: ' + Style.RESET_ALL))
-        if len(user_name) <= 1:
+        if len(user_name) <= 1 or not user_name.isalpha():
             print(Fore.RED + 'Please, input correct name.' + Style.RESET_ALL)
         else: break
     print(Fore.GREEN + f'\nHello, {user_name}!')
