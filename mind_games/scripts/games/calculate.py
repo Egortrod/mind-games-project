@@ -8,8 +8,9 @@ def user_correct_answer():
 
 def user_not_correct_answer():
     print(f"\n'{user_input}' is wrong answer ;(. "
-          f"Correct answer was '{correct_answer}'."
-          f"\nLet's try again, {user_name()}!\n")
+          f"Correct answer was '{correct_answer}'.")
+    time.sleep(0.8)
+    print(f"\nLet's try again, {user_name()}!\n")
     
 
 def comparing():

@@ -1,12 +1,20 @@
+import time
+from colorama import Fore, Style
+
+
 def greet():
     global user_name
-    print('Welcome to the Mind Games!\nMay I have your name?')
+    time.sleep(0.2)
+    print(Fore.GREEN + 'Welcome to the Mind Games!')
+    time.sleep(0.7)
+    print('May I have your name?' + Style.RESET_ALL)
     while True:
-        user_name = str(input('Input your name: '))
+        time.sleep(0.7)
+        user_name = str(input(Fore.CYAN + 'Input your name: ' + Style.RESET_ALL))
         if len(user_name) <= 1:
-            print('Please, input correct name.')
+            print(Fore.RED + 'Please, input correct name.' + Style.RESET_ALL)
         else: break
-    print(f'\nHello, {user_name}!')
+    print(Fore.GREEN + f'\nHello, {user_name}!')
 
 
 def user_name():
