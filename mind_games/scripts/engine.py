@@ -1,9 +1,10 @@
-from mind_games.scripts.games import calculate, arithmetic_progression
+from mind_games.scripts.games import calculate, arithmetic_progression, geometric_progression
 from mind_games.scripts.games.calculate import calc_out
 from mind_games.scripts.games.arithmetic_progression import ar_out
+from mind_games.scripts.games.geometric_progression import gm_out
 from mind_games.scripts.cli import greet, user_name
 import time
-from colorama import Fore
+from colorama import Fore, Style
 # from mind_games.scripts.games.calculate import *
 
 
@@ -23,17 +24,17 @@ def choose_game():
     time.sleep(0.8)
     print('You have to choose your game.')
     time.sleep(0.8)
-    print('Input index of chosen game:\n')
+    print('Input' + Fore.RED + ' index ' + Style.RESET_ALL + 'of chosen game:\n')
     time.sleep(0.8)
     for index, game in enumerate(games):
         time.sleep(0.2)
-        print(f'#{index + 1} - {game}')
+        print(Fore.RED + '#' + str(index + 1) + Fore.WHITE + ' - ' + Fore.CYAN + str(game) + Style.RESET_ALL)
     while True:
         time.sleep(0.8)
         user_game = int(input('\nYour game in #'))
         if len(games) - user_game >= 0 and len(games) - user_game <= len(games) and user_game != 0:
             time.sleep(0.8)
-            print(f'Welcome to the {games[user_game - 1]} game and have fun!\n')
+            print('Welcome to the ' + Fore.CYAN + str(games[user_game - 1]) + ' game ' + Style.RESET_ALL + 'and have fun!\n')
             break
         else: 
             time.sleep(0.8)
@@ -43,17 +44,17 @@ def choose_game():
 def discription_of_games():
     all_discriptions = {
         'calculate': 'сorrectly solve the provided expression,\nwhich can only contain addition, subtraction and multiplication operations',
-        'arithmetic progression': 'put the correct number in the missing place',
-        'geometric progression': '333333333333333333333333333333333333333333333333333333333333333',
+        'arithmetic progression': 'put the correct number\nin the missing place, using the laws of arithmetic progression',
+        'geometric progression': 'put the correct number\nin the missing place, using the laws of geometric progression',
         'gcd': '444444444444444444444444444444444444444444444444444444444444444',
         'prime': '55555555555555555555555555555555555555555555555555555555555555555555'
     }
     time.sleep(0.8)
-    print('-' * 75)
+    print(Fore.CYAN + ('-' * 75) + Style.RESET_ALL)
     print(f'In {games[user_game - 1]} game you have to {all_discriptions[games[user_game - 1]]}.')
-    print('-' * 75, '\n')
+    print(Fore.CYAN + ('-' * 75) + Style.RESET_ALL + '\n')
     time.sleep(0.8)
-    print(f"Good luck and let's start!\n")
+    print("Good luck and " + Fore.CYAN + "let's start!\n" + Style.RESET_ALL)
     time.sleep(0.8)
 
 
@@ -67,16 +68,22 @@ def game():
                 correct_answers += 1
                 if calc_out() == False:
                     return
-            case 2: #arithmetic
+            case 2: #arithmetic progression
                 arithmetic_progression.main()
                 time.sleep(0.8)
                 correct_answers += 1
                 if ar_out() == False:
                     return
+            case 3: #geometric progression
+                geometric_progression.main()
+                time.sleep(0.8)
+                correct_answers += 1
+                if gm_out() == False:
+                    return
     if correct_answers == 3:
         print(f'Congratulations, {user_name()}!\n\n')
         time.sleep(0.8)
-        print('!!!You won!!!\n')
+        print(Fore.CYAN + '!!!You won!!!\n' + Style.RESET_ALL)
         # print(f'Congratulations!')
 
 
@@ -86,11 +93,13 @@ def main():
         choose_game()
         discription_of_games()
         game()
-        print('Would you like to continue?\nIf yes, tap SPACE and ENTER.\nIf no, just tap ENTER.')
+        print('Would you like to continue?')
+        print('If' + Fore.GREEN + ' yes' + Style.RESET_ALL + ' ,tap ' + Fore.CYAN + 'SPACE and ENTER' + Style.RESET_ALL)
+        print('If' + Fore.RED + ' no' + Style.RESET_ALL + ' , just tap ' + Fore.CYAN + 'ENTER.' + Style.RESET_ALL)
         time.sleep(0.8)
         user_ans = str(input('\nContinue?\n'))
         if user_ans != ' ':
-            print('See you!')
+            print(Fore.CYAN + 'See you!' + Style.RESET_ALL)
             break
                 
 

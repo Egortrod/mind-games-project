@@ -24,31 +24,24 @@ def comparing():
         out = False
 
 
-def calc_out():
+def gm_out():
     return out
 
 
 def main():
-    global user_input
-    global correct_answer
-    variants_of_exp = ['*', '-', '+']
+    global correct_answer, user_input
     first_number = randint(1, 25)
-    second_number = randint(1, 10)
-    exp = variants_of_exp[randint(0, 2)]
-    print(f'Question: {first_number} {exp} {second_number}')
+    diff = randint(2, 5)
+    result = []
+    for idx in range(1, 6):
+        result.append(first_number * diff ** (idx-1))
+    replaced_index = randint(0, 4)
+    correct_answer = result[replaced_index]
+    result[replaced_index] = '..'
+    print('Question:', ' '.join([str(x) for x in result]))
     user_input = int(input('Your answer: '))
-    match exp:
-            case '*':
-                correct_answer = second_number * first_number
-                comparing()
-            case '-':
-                correct_answer = first_number - second_number
-                comparing()
-            case '+':
-                correct_answer = second_number + first_number
-                comparing()
+    comparing()
 
 
-if __name__ == '__main__':       
-    greet()
-    main()
+# if __name__ == '__main__':
+#     main()
