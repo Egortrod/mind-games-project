@@ -17,6 +17,28 @@ def greet():
     print('\nHello, ' + Fore.CYAN + user_name + Style.RESET_ALL + '!')
 
 
+def dificult():
+    global diffs, user_diff
+    print('Choose ' + Fore.RED + '# of difficulty ' + Style.RESET_ALL + 'of game:')
+    diffs = ['easy', 'medium', 'hard']
+    for idx, diff in enumerate(diffs):
+        print(Fore.RED + '#' + str(idx) + Style.RESET_ALL + ' - ' + Fore.CYAN + str(diff) + Style.RESET_ALL)
+    user_diff = int(input('Your difficult: '))
+    while True:
+        if user_diff not in [1, 2, 3]:
+            print(Fore.RED + 'Choose correct index!' + Style.RESET_ALL)
+        else:
+            break
+
+
+def user_difficult_word():
+    return diffs[user_diff - 1]
+
+
+def user_difficult_idx():
+    return user_diff - 1
+
+
 def user_name():
     return user_name
 

@@ -49,6 +49,6 @@ def main():
                 comparing()
 
 
-if __name__ == '__main__':       
-    greet()
-    main()
+# if __name__ == '__main__':       
+#     greet()
+#     main()

@@ -94,11 +94,13 @@ def main():
         discription_of_games()
         game()
         print('Would you like to continue?')
-        print('If' + Fore.GREEN + ' yes' + Style.RESET_ALL + ' ,tap ' + Fore.CYAN + 'SPACE and ENTER' + Style.RESET_ALL)
-        print('If' + Fore.RED + ' no' + Style.RESET_ALL + ' , just tap ' + Fore.CYAN + 'ENTER.' + Style.RESET_ALL)
+        print('If' + Fore.GREEN + ' yes' + Style.RESET_ALL + ', just tap ' + Fore.CYAN + 'ENTER.' + Style.RESET_ALL)
+        print('If' + Fore.RED + ' no' + Style.RESET_ALL + ', tap ' + Fore.CYAN + 'any other key.' + Style.RESET_ALL)
         time.sleep(0.8)
         user_ans = str(input('\nContinue?\n'))
-        if user_ans != ' ':
+        if user_ans == '':
+            continue
+        else:
             print(Fore.CYAN + 'See you!' + Style.RESET_ALL)
             break
                 
