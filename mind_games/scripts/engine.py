@@ -2,7 +2,7 @@ from mind_games.scripts.games import calculate, arithmetic_progression, geometri
 from mind_games.scripts.games.calculate import calc_out
 from mind_games.scripts.games.arithmetic_progression import ar_out
 from mind_games.scripts.games.geometric_progression import gm_out
-from mind_games.scripts.cli import greet, user_name
+from mind_games.scripts.cli import greet, user_name, difficulty
 import time
 from colorama import Fore, Style
 # from mind_games.scripts.games.calculate import *
@@ -53,9 +53,9 @@ def discription_of_games():
     print(Fore.CYAN + ('-' * 75) + Style.RESET_ALL)
     print(f'In {games[user_game - 1]} game you have to {all_discriptions[games[user_game - 1]]}.')
     print(Fore.CYAN + ('-' * 75) + Style.RESET_ALL + '\n')
-    time.sleep(0.8)
-    print("Good luck and " + Fore.CYAN + "let's start!\n" + Style.RESET_ALL)
-    time.sleep(0.8)
+    # time.sleep(0.8)
+    # print("Good luck and " + Fore.CYAN + "let's start!\n" + Style.RESET_ALL)
+    # time.sleep(0.8)
 
 
 def game():
@@ -92,6 +92,7 @@ def main():
     while True:
         choose_game()
         discription_of_games()
+        difficulty()
         game()
         print('Would you like to continue?')
         print('If' + Fore.GREEN + ' yes' + Style.RESET_ALL + ', just tap ' + Fore.CYAN + 'ENTER.' + Style.RESET_ALL)
