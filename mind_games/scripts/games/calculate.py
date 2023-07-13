@@ -31,21 +31,21 @@ def calc_out():
 def main():
     global user_input
     global correct_answer
-    variants_of_exp_lvl2 = ['*', '-', '+']
-    variants_of_exp_lvl1 = ['-', '+']
+
+    variants_of_exp = ['*', '-', '+']
     match user_difficult_idx():
         case 0:
-            first_number = randint(100, 1000)
+            first_number = randint(100, 200)
             second_number = randint(1, 100)
-            exp = variants_of_exp_lvl1[randint(0, 1)]
+            exp = variants_of_exp[randint(1, 2)]
         case 1:
-            first_number = randint(1, 25)
-            second_number = randint(1, 10)
-            exp = variants_of_exp_lvl2[randint(0, 2)]
+            first_number = randint(100, 500)
+            second_number = randint(50, 100)
+            exp = variants_of_exp[randint(1, 2)]
         case 2:
-            first_number = randint(5, 50)
-            second_number = randint(10, 100)
-            exp = variants_of_exp_lvl2[randint(0, 2)]
+            first_number = randint(50, 100)
+            second_number = randint(50, 100)
+            exp = variants_of_exp[0]
     print(f'Question: {first_number} {exp} {second_number}')
     user_input = int(input('Your answer: '))
     match exp:

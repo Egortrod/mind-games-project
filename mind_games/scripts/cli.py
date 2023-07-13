@@ -19,10 +19,14 @@ def greet():
 
 def difficulty():
     global diffs, user_diff
+    time.sleep(0.8)
     print('Choose ' + Fore.RED + '# of difficulty ' + Style.RESET_ALL + 'of game:\n')
+    time.sleep(0.6)
     diffs = ['easy', 'medium', 'hard']
     for idx, diff in enumerate(diffs):
+        time.sleep(0.2)
         print(Fore.RED + '#' + str(idx + 1) + Style.RESET_ALL + ' - ' + Fore.CYAN + str(diff) + Style.RESET_ALL)
+    time.sleep(0.8)
     user_diff = int(input('\nYour difficult: '))
     while True:
         if user_diff not in [1, 2, 3]:

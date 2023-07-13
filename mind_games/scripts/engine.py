@@ -43,7 +43,8 @@ def choose_game():
 
 def discription_of_games():
     all_discriptions = {
-        'calculate': 'сorrectly solve the provided expression,\nwhich can only contain addition, subtraction and multiplication operations',
+        'calculate': 'сorrectly solve the provided expression,\nwhich can only contain addition, '
+        'subtraction and multiplication operations',
         'arithmetic progression': 'put the correct number\nin the missing place, using the laws of arithmetic progression',
         'geometric progression': 'put the correct number\nin the missing place, using the laws of geometric progression',
         'gcd': '444444444444444444444444444444444444444444444444444444444444444',
@@ -84,26 +85,32 @@ def game():
         print(f'Congratulations, {user_name()}!\n\n')
         time.sleep(0.8)
         print(Fore.CYAN + '!!!You won!!!\n' + Style.RESET_ALL)
+        time.sleep(0.8)
         # print(f'Congratulations!')
 
 
 def main():
-    greet()
-    while True:
-        choose_game()
-        discription_of_games()
-        difficulty()
-        game()
-        print('Would you like to continue?')
-        print('If' + Fore.GREEN + ' yes' + Style.RESET_ALL + ', just tap ' + Fore.CYAN + 'ENTER.' + Style.RESET_ALL)
-        print('If' + Fore.RED + ' no' + Style.RESET_ALL + ', tap ' + Fore.CYAN + 'any other key.' + Style.RESET_ALL)
+    try:
+        greet()
+        while True:
+            choose_game()
+            discription_of_games()
+            difficulty()
+            game()
+            print('Would you like to continue?')
+            print('If' + Fore.GREEN + ' yes' + Style.RESET_ALL + ', just tap ' + Fore.CYAN + 'ENTER.' + Style.RESET_ALL)
+            print('If' + Fore.RED + ' no' + Style.RESET_ALL + ', tap ' + Fore.CYAN + 'any other key.' + Style.RESET_ALL)
+            time.sleep(0.8)
+            user_ans = str(input('\nContinue?\n'))
+            if user_ans == '':
+                continue
+            else:
+                print(Fore.CYAN + 'See you!' + Style.RESET_ALL)
+                break
+    except ValueError:
         time.sleep(0.8)
-        user_ans = str(input('\nContinue?\n'))
-        if user_ans == '':
-            continue
-        else:
-            print(Fore.CYAN + 'See you!' + Style.RESET_ALL)
-            break
+        print(Fore.RED + '\nYou entered the wrong value!\nStart the game from the beginning!'
+              + '\nDo not just press ENTER in choises and use only integer values!' + Style.RESET_ALL)
                 
 
 if __name__ == '__main__':
