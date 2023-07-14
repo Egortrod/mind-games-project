@@ -5,4 +5,5 @@
 2. There is no victory counter;
 3. There is no configured pyproject;
 4. Not everywhere there are alerts for incorrect conclusions;
-5. There is no customized README file. 
+5. There is no customized README file; 
+6. Need to refactor all scripts in /games (dup blocks).
