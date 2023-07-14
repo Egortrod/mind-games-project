@@ -27,8 +27,8 @@ def difficulty():
         time.sleep(0.2)
         print(Fore.RED + '#' + str(idx + 1) + Style.RESET_ALL + ' - ' + Fore.CYAN + str(diff) + Style.RESET_ALL)
     time.sleep(0.8)
-    user_diff = int(input('\nYour difficult: '))
     while True:
+        user_diff = int(input('\nYour difficult: '))
         if user_diff not in [1, 2, 3]:
             print(Fore.RED + 'Choose correct index!' + Style.RESET_ALL)
         else:

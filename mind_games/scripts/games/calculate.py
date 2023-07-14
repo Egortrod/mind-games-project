@@ -31,7 +31,6 @@ def calc_out():
 def main():
     global user_input
     global correct_answer
-
     variants_of_exp = ['*', '-', '+']
     match user_difficult_idx():
         case 0:

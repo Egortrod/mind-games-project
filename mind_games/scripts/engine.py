@@ -1,7 +1,8 @@
-from mind_games.scripts.games import calculate, arithmetic_progression, geometric_progression
+from mind_games.scripts.games import calculate, arithmetic_progression, geometric_progression, gcd
 from mind_games.scripts.games.calculate import calc_out
 from mind_games.scripts.games.arithmetic_progression import ar_out
 from mind_games.scripts.games.geometric_progression import gm_out
+from mind_games.scripts.games.gcd import gcd_out
 from mind_games.scripts.cli import greet, user_name, difficulty
 import time
 from colorama import Fore, Style
@@ -38,7 +39,7 @@ def choose_game():
             break
         else: 
             time.sleep(0.8)
-            print("Input correct game's index")
+            print(Fore.RED + "Input correct game's index!" + Style.RESET_ALL)
 
 
 def discription_of_games():
@@ -47,7 +48,7 @@ def discription_of_games():
         'subtraction and multiplication operations',
         'arithmetic progression': 'put the correct number\nin the missing place, using the laws of arithmetic progression',
         'geometric progression': 'put the correct number\nin the missing place, using the laws of geometric progression',
-        'gcd': '444444444444444444444444444444444444444444444444444444444444444',
+        'gcd': 'determine the greatest common divisor of two numbers',
         'prime': '55555555555555555555555555555555555555555555555555555555555555555555'
     }
     time.sleep(0.8)
@@ -81,11 +82,20 @@ def game():
                 correct_answers += 1
                 if gm_out() == False:
                     return
+            case 4: #gcd
+                gcd.main()
+                time.sleep(0.8)
+                correct_answers += 1
+                if gcd_out() == False:
+                    return
     if correct_answers == 3:
-        print(f'Congratulations, {user_name()}!\n\n')
+        # user_score += 1
+        print('Congratulations, ' + Fore.CYAN + user_name() + Style.RESET_ALL + '!\n')
         time.sleep(0.8)
         print(Fore.CYAN + '!!!You won!!!\n' + Style.RESET_ALL)
         time.sleep(0.8)
+        # print('Your score: ' + Fore.CYAN + str(user_score) + Style.RESET_ALL + '!\n')
+        # time.sleep(0.8)
         # print(f'Congratulations!')
 
 
