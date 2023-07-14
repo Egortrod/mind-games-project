@@ -1,8 +1,9 @@
-from mind_games.scripts.games import calculate, arithmetic_progression, geometric_progression, gcd
+from mind_games.scripts.games import calculate, arithmetic_progression, geometric_progression, gcd, prime
 from mind_games.scripts.games.calculate import calc_out
 from mind_games.scripts.games.arithmetic_progression import ar_out
 from mind_games.scripts.games.geometric_progression import gm_out
 from mind_games.scripts.games.gcd import gcd_out
+from mind_games.scripts.games.prime import prime_out
 from mind_games.scripts.cli import greet, user_name, difficulty
 import time
 from colorama import Fore, Style
@@ -87,6 +88,12 @@ def game():
                 time.sleep(0.8)
                 correct_answers += 1
                 if gcd_out() == False:
+                    return
+            case 5: #prime
+                prime.main()
+                time.sleep(0.8)
+                correct_answers += 1
+                if prime_out() == False:
                     return
     if correct_answers == 3:
         # user_score += 1
