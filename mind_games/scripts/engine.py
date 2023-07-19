@@ -22,7 +22,7 @@ from colorama import Fore, Style
 
 def choose_game():
     global games, user_game
-    games = ['calculate', 'arithmetic progression', 'geometric progression', 'gcd', 'prime']
+    games = ['calculate', 'arithmetic progression', 'geometric progression', 'divisor', 'prime number']
     time.sleep(0.8)
     print('You have to choose your game.')
     time.sleep(0.8)
@@ -49,8 +49,8 @@ def discription_of_games():
         'subtraction and multiplication operations',
         'arithmetic progression': 'put the correct number\nin the missing place, using the laws of arithmetic progression',
         'geometric progression': 'put the correct number\nin the missing place, using the laws of geometric progression',
-        'gcd': 'determine the greatest common divisor of two numbers',
-        'prime': '55555555555555555555555555555555555555555555555555555555555555555555'
+        'divisor': 'determine the greatest common divisor of two numbers',
+        'prime number': 'determine whether a given number is\nprime or not. **pay attention to how to give answers!**'
     }
     time.sleep(0.8)
     print(Fore.CYAN + ('-' * 75) + Style.RESET_ALL)
