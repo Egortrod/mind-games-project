@@ -7,3 +7,5 @@
 4. Not everywhere there are alerts for incorrect conclusions;
 5. There is no customized README file; 
 6. Need to refactor all scripts in /games (dup blocks).
+
+#test1
