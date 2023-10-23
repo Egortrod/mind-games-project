@@ -20,9 +20,12 @@ from colorama import Fore, Style
 #             print('Please, input correct name.')
 #         else: break
 
+global games
+games = ['calculate', 'arithmetic progression', 'geometric progression', 'divisor', 'prime number']
+
 
 def choose_game():
-    global games, user_game
+    global user_game
     games = ['calculate', 'arithmetic progression', 'geometric progression', 'divisor', 'prime number']
     time.sleep(0.8)
     print('You have to choose your game.')
