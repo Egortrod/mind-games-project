@@ -1,36 +1,36 @@
 from random import randint
-from mind_games.scripts.cli import *
 from colorama import Fore, Style
+from mind_games.scripts.cli import *
+from mind_games.scripts.supp import *
 
 
-def user_correct_answer():
-    print(Fore.GREEN + 'Correct!' + Style.RESET_ALL)
+# def user_correct_answer():
+#     print(Fore.GREEN + 'Correct!' + Style.RESET_ALL)
 
 
-def user_not_correct_answer():
-    print('\n\'' + str(user_input) + '\' is ' + Fore.RED + 'wrong answer' + 
-          Style.RESET_ALL + ' ;(\nCorrect answer was \'' + str(correct_answer) + "\'")  
-    time.sleep(0.8)
-    print("\nLet's try again, " + Fore.CYAN + str(user_name()) + Style.RESET_ALL + "!\n")
+# def user_not_correct_answer():
+#     print('\n\'' + str(user_input) + '\' is ' + Fore.RED + 'wrong answer' + 
+#           Style.RESET_ALL + ' ;(\nCorrect answer was \'' + str(correct_answer) + "\'")  
+#     time.sleep(0.8)
+#     print("\nLet's try again, " + Fore.CYAN + str(user_name()) + Style.RESET_ALL + "!\n")
     
 
-def comparing():
-    global out
-    out = True
-    if correct_answer == user_input:
-        user_correct_answer()
-    else:
-        user_not_correct_answer()
-        out = False
+# def comparing():
+#     global out
+#     out = True
+#     if correct_answer == user_input:
+#         user_correct_answer()
+#     else:
+#         user_not_correct_answer()
+#         out = False
 
 
-def calc_out():
-    return out
+# def calc_out():
+#     return out
 
 
 def main():
-    global user_input
-    global correct_answer
+    global correct_answer, user_input
     variants_of_exp = ['*', '-', '+']
     match user_difficult_idx():
         case 0:
@@ -50,13 +50,13 @@ def main():
     match exp:
         case '*':
             correct_answer = second_number * first_number
-            comparing()
+            comparing(correct_answer, user_input)
         case '-':
             correct_answer = first_number - second_number
-            comparing()
+            comparing(correct_answer, user_input)
         case '+':
             correct_answer = second_number + first_number
-            comparing()
+            comparing(correct_answer, user_input)
 
 
 # if __name__ == '__main__':       
