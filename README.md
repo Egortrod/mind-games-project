@@ -5,6 +5,10 @@
 The Brain Games project consists of 5 mini-games that run from the console. Each task is logic-based and run with the following commands:
 
 1. calculate: сorrectly solve the provided expression, which can only contain addition subtraction and multiplication operations
+
+### Asciinema of calculate game features:
+https://asciinema.org/a/rUkRkLl7vlf88jhHxMevWrE8i
+
 2. arithmetic progression: put the correct number\nin the missing place, using the laws of arithmetic progression
 3. geometric progression: put the correct number\nin the missing place, using the laws of geometric progression
 4. divisor: determine the greatest common divisor of two numbers 
