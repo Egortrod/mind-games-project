@@ -1,13 +1,13 @@
 from mind_games.scripts.games import calculate, arithmetic_progression, geometric_progression, gcd, prime
+from mind_games.scripts.cli import greet, user_name, difficulty
+from mind_games.scripts.supp import out
+from colorama import Fore, Style
+import time
 # from mind_games.scripts.games.calculate import calc_out
 # from mind_games.scripts.games.arithmetic_progression import ar_out
 # from mind_games.scripts.games.geometric_progression import gm_out
 # from mind_games.scripts.games.gcd import gcd_out
 # from mind_games.scripts.games.prime import prime_out
-from mind_games.scripts.cli import greet, user_name, difficulty
-from mind_games.scripts.supp import out
-import time
-from colorama import Fore, Style
 # from mind_games.scripts.games.calculate import *
 
 
