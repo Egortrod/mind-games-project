@@ -31,8 +31,16 @@ from mind_games.scripts.supp import *
 
 def main():
     global correct_answer, user_input
-    first_number = randint(1, 10)
-    diff = randint(2, 5)
+    match user_difficult_idx():
+        case 0:
+            first_number = randint(1, 10)
+            diff = randint(2, 5)
+        case 1:
+            first_number = randint(-500, 500)
+            diff = randint(11, 50)
+        case 2:
+            first_number = randint(-10000, 10000)
+            diff = randint(100, 300) 
     result = []
     for idx in range(10):
         result.append(first_number + idx * diff)

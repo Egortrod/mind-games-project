@@ -36,7 +36,7 @@ def main():
         case 0:
             first_number = randint(100, 200)
             second_number = randint(1, 100)
-            exp = variants_of_exp[randint(1, 2)]
+            exp = variants_of_exp[2]
         case 1:
             first_number = randint(100, 500)
             second_number = randint(50, 100)

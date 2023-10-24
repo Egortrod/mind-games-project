@@ -32,8 +32,16 @@ import math
 
 def main():
     global correct_answer, user_input
-    first_number = randint(1, 100)
-    second_number = randint(1, 100)
+    match user_difficult_idx():
+        case 0:
+            first_number = randint(1, 30)
+            second_number = randint(1, 10)
+        case 1:
+            first_number = randint(10, 50)
+            second_number = randint(10, 20)
+        case 2:
+            first_number = randint(30, 100)
+            second_number = randint(30, 100)        
     correct_answer = math.gcd(first_number, second_number)
     print(f'Question: {first_number} and {second_number}')
     user_input = int(input('Your answer: '))
