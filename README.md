@@ -4,7 +4,7 @@
 ### Discription:
 The Brain Games project consists of 5 mini-games that run from the console. Each task is logic-based and run with the following commands:
 
-1. ### Calculate
+   ### 1.Calculate
 Correctly solve the provided expression, which can only contain addition subtraction and multiplication operations
 
 ### Asciinema of calculate game features:
