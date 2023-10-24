@@ -37,4 +37,4 @@ def main():
     correct_answer = math.gcd(first_number, second_number)
     print(f'Question: {first_number} and {second_number}')
     user_input = int(input('Your answer: '))
-    comparing(correct_asnwer, user_input)
+    comparing(correct_answer, user_input)
