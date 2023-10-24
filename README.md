@@ -42,12 +42,11 @@ Determine whether a given number is prime or not
 ### Asciinema of prime number game features:
 https://asciinema.org/a/RcorJR9LGMZoXIZqDbL01vbX9\
 
-### Problems:
+<!-- ### Problems: -->
 <!-- 1. There are no difficulties in games 2-5; (fixed)-->
 <!-- 2. There is no victory counter; (fixed)-->
 <!-- 3. There is no configured pyproject; (fixed)-->
-4. Not everywhere there are alerts for incorrect conclusions;
+<!-- 4. Not everywhere there are alerts for incorrect conclusions; (fixed)-->
 <!-- 5. There is no customized README file; (fixed)-->
 <!-- 6. Need to refactor all scripts in /games (dup blocks;. (fixed)-->
 <!-- 7. Add all asciinemas. (fixed) -->
-
