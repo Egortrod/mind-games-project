@@ -32,9 +32,9 @@ Determine whether a given number is prime or not
 
 ### Problems:
 1. There are no difficulties in games 2-5;
-2. There is no victory counter;
-3. There is no configured pyproject;
+<!-- 2. There is no victory counter; -->
+<!-- 3. There is no configured pyproject; -->
 4. Not everywhere there are alerts for incorrect conclusions;
-5. There is no customized README file; 
-6. Need to refactor all scripts in /games (dup blocks).
+<!-- 5. There is no customized README file;  -->
+<!-- 6. Need to refactor all scripts in /games (dup blocks). -->
 
