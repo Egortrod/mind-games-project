@@ -6,6 +6,7 @@
 git clone git@github.com:Egortrod/mind-games-project.git
 cd mind-games-project
 make install
+make build
 make package-install
 ```
 
