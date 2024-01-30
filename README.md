@@ -10,6 +10,11 @@ make build
 make package-install
 ```
 
+### Usage:
+```
+mind-games
+```
+
 ### Discription:
 The Brain Games project consists of 5 mini-games that run from the console. Each task is logic-based and run with the following commands:
 
